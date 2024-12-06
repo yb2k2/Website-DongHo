@@ -1,0 +1,93 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LayoutPageAdmin.master.cs" Inherits="LayoutPageAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Watch Shop</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="../CSS/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Lightbox/lightbox.min.css" />
+    <link rel="stylesheet" href="../aos-library/aos.css" />
+    <link rel="stylesheet" href="../CSS/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="../JS/index.js"></script>
+    <link rel="stylesheet" href="../CSS/AdminStyle.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="w-100">
+            <div class="row w-100 ml-0">
+                <div class="col-2" style="min-height: 100vh">
+                    <nav class="sidebar animated lightSpeedIn">
+                        <div class="text py-3">
+                            <div class="mb-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTf6qjj4gzC1Pq2P1kQ_Ul49Zah7Bljz6C5Ng&s" style="width: 50px; height: 50px; border-radius: 50%" class=" animated fadeInRight" />
+                            </div>
+                            <h3 class="animated zoomIn">Admin</h3>
+                        </div>
+                        <ul>
+                            <li>
+                                <p class="feat-btn mb-0"><i class="fa fa-th-list pr-3"></i>Quản lí<span class="fas fa-caret-down first"></span></p>
+                                <ul class="feat-show">
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin/ThemSanPham.aspx">Thêm sản phẩm</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/ThongKe.aspx">Thống kê</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/PhanHoi.aspx">Phản hồi của khách hàng</asp:HyperLink></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="serv-btn mb-0"><i class="fa fa-box-open pr-3"></i>Sản phẩm<span class="fas fa-caret-down second"></span></p>
+                                <ul class="serv-show">
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Admin/Admin.aspx">Danh mục các sản phẩm</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Admin/DongHoNam.aspx">Đồng hồ nam</asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/DongHoNu.aspx">Đồng hồ nữ</asp:HyperLink></li>
+                                    
+
+<li>
+    <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Admin/DongHoTreoTuong.aspx">Đồng hồ treo tường</asp:HyperLink>
+</li>
+<li>
+    <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Admin/DongHoCapDoi.aspx">Đồng hồ cặp đôi</asp:HyperLink>
+</li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/TrangChu.aspx"><i class="fa fa-arrow-left pr-3"></i>Exit</asp:HyperLink></li>
+                        </ul>
+                        <a href="#" class="collapseBtn"></a>
+                    </nav>
+                </div>
+                <div class="col-10 pl-5 pr-2" style="background-color: #f1f2f6;">
+                    <div class="content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="cd-top text-replace js-cd-top backToTop">
+            <img src="Images/to-top.png" /></a>
+    </form>
+    <script src="../JS/jquery-3.5.1.min.js"></script>
+    <script src="../JS/popper.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../Lightbox/lightbox.min.js"></script>
+    <script src="../aos-library/aos.js"></script>
+    <script src="../BackToTop/util.js"></script>
+    <script src="../BackToTop/main.js"></script>
+    <script src="../JS/JSAdmin.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

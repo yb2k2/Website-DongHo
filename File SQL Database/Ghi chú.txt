@@ -1,0 +1,20 @@
+Cách 1
+
+--Là các bạn import database file .bacpac vào sql server bằng cách mở sql server lên chuột phải vào databases chọn Import data-tier Application (nên xài cách này cho nhanh)
+
+Cách 2
+
+--Là các bạn mở file sql QL_BanDongHo và tiến hành excute dữ liệu
+
+Mình xài quyền window
+
+----Tài khoản và mật khẩu admin là:
+
++ Tài khoản: Mark
++Mật khẩu: Mark
+
+Hoặc có thể vào DangNhap.aspx.cs chỉnh tài khoản mật khẩu admin tuỳ ý
+
+Mở thư mục website đã tải về nhấp vào TrangChu.aspx chuột phải chọn Set As Start Page và Run......
+
+ 

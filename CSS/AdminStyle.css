@@ -1,0 +1,275 @@
+﻿body {
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Admin-style -----------------------------------------------------------------------------------------------*/
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    left: 0px;
+    background: #00152a;
+    transition: all .5s;
+    z-index: 2;
+}
+
+.menuIcon {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    text-align: center;
+    position: absolute;
+    top: 25px;
+    left: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+    .menuIcon span {
+        font-size: 24px;
+        line-height: 50px;
+        color: #ffffff;
+    }
+
+.sidebar .text {
+    text-align: center;
+    background-color: #00152a;
+}
+
+    .sidebar .text h3 {
+        color: yellow;
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+nav ul {
+    list-style: none;
+    height: 100%;
+    width: 100%;
+}
+
+    nav ul li {
+        line-height: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+        nav ul li a, nav ul li p {
+            position: relative;
+            text-decoration: none !important;
+            color: white;
+            font-size: 18px;
+            padding-left: 20px;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+        }
+
+            nav ul li a:hover, nav ul li p:hover {
+                color: cyan;
+            }
+
+    nav ul ul li {
+        line-height: 42px;
+        border-bottom: none;
+    }
+
+    nav ul ul {
+        display: none;
+    }
+
+    nav ul li a.feat-btn.active,
+    nav ul li a.serv-btn.active {
+        color: cyan;
+        background-color: #00152a;
+        border-left: 3px solid cyan;
+    }
+
+    nav ul ul.feat-show.show,
+    nav ul ul.serv-show.show1 {
+        display: block;
+    }
+
+    nav ul ul li a {
+        font-size: 16px;
+        padding-left: 55px;
+        background-color: #000c18;
+    }
+
+    nav ul li a span,
+    nav ul li p span {
+        font-size: 22px;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        transition: all .5s;
+    }
+
+        nav ul li a span.rolate,
+        nav ul li p span.rolate {
+            transform: translateY(-50%) rotate(-180deg);
+        }
+
+.collapseBtn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 100%;
+    padding: 25px 0;
+    background-color: #002140;
+    text-align: center;
+}
+
+.content {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    margin-top: 70px;
+}
+
+/* Item styles */
+.styleText span {
+    display: block;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+/* Đặt chiều rộng và chiều cao cố định cho các item */
+.item {
+    width: 300px; /* Kích thước cố định cho mỗi mục */
+    height: 400px; /* Đảm bảo đủ chỗ cho ảnh và nút */
+    margin: 15px auto; /* Canh giữa các item */
+    background-color: #f9f9f9; /* Màu nền để kiểm tra layout */
+    border: 1px solid #ddd; /* Đường viền kiểm tra */
+    display: flex;
+    flex-direction: column; /* Sắp xếp dọc */
+    justify-content: space-between; /* Khoảng cách đều giữa các thành phần */
+    align-items: center; /* Canh giữa nội dung */
+    padding: 10px;
+}
+
+
+
+    /* Căn chỉnh hình ảnh */
+    .item img {
+        height: 200px; /* Chiều cao cố định */
+        width: auto; /* Chiều rộng tự động để giữ tỷ lệ */
+        object-fit: contain; /* Giữ nguyên tỷ lệ của ảnh */
+        border-radius: 8px; /* Bo góc cho ảnh */
+        display: block; /* Đảm bảo ảnh không có khoảng cách dưới ảnh */
+    }
+
+
+    /* Hiệu ứng hover cho ảnh */
+    .item:hover img {
+        transform: scale(1.05); /* Phóng to khi rê chuột */
+    }
+
+    /* Căn chỉnh văn bản sản phẩm */
+    .item .styleText {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    /* Nút xoá */
+    .item .btn {
+        width: 80%; /* Đảm bảo nút chiếm chiều ngang hợp lý */
+        font-size: 16px;
+        padding: 8px 10px;
+        background-color: #dc3545; /* Màu đỏ cho nút xoá */
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        transition: background-color 0.3s ease;
+    }
+
+        /* Hiệu ứng hover cho nút */
+        .item .btn:hover {
+            background-color: #c82333;
+        }
+
+/* Đảm bảo layout responsive */
+@media (max-width: 768px) {
+    .item {
+        width: 90%; /* Chiều rộng thích nghi với màn hình nhỏ */
+        height: auto; /* Tự điều chỉnh chiều cao */
+    }
+
+        .item img {
+            height: 150px; /* Giảm chiều cao ảnh */
+        }
+}
+
+
+.title {
+    color: #3c3451;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 32px;
+    margin-bottom: 16px;
+    padding: 25px 0;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+/* Back to top button */
+.backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+    .backToTop img {
+        width: 45px;
+        height: 45px;
+    }
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive Sidebar for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .menuIcon {
+        left: 20px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+        
+}

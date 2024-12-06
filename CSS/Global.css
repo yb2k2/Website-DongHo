@@ -1,0 +1,501 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+.container_custom {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.headerGridViewStyle {
+    padding: 8px 38px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    background-color: #555;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+    footer .contact {
+        border-left: 1px dashed white;
+        border-right: 1px dashed white;
+        padding: 30px;
+    }
+
+    footer .menuFooter li {
+        margin: 15px 0;
+    }
+
+.giftAndDiscountPrice {
+    padding: 45px 0;
+    background: url('../Images/movement-gears-background.jpg') center center no-repeat;
+    width: 100%;
+    background-size: cover;
+    color: white;
+}
+
+    .giftAndDiscountPrice h3 {
+        font-size: 20px;
+    }
+
+    .giftAndDiscountPrice i {
+        font-size: 36px;
+    }
+
+.container-banner {
+    overflow: hidden;
+}
+
+.banner .banner1 {
+    padding: 120px 0;
+    background: url('../Images/img1_2e549330-1e72-42fe-b909-7caec5ab9eaa.jpg') center center no-repeat;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    transition: all .5s;
+}
+
+.banner .banner2 {
+    padding: 120px 0;
+    background: url('../Images/img2_0b6fbb1b-4374-4875-a7ff-93f41dce689e.jpg') center center no-repeat;
+    width: 100%;
+    background-size: cover;
+    color: white;
+    transition: all .5s;
+}
+
+.banner .title-banner {
+    text-align: right;
+    padding-right: 50px;
+}
+
+.banner .banner1:hover, .banner .banner2:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+}
+
+.img-info {
+    overflow: hidden;
+}
+
+.container-info img {
+    transition: all .5s;
+    cursor: pointer;
+}
+
+.more_infomation img:hover {
+    transform: scale(1.1);
+}
+
+.formRegister {
+    width: 450px;
+    margin: 0 auto;
+}
+
+.product {
+    border: 3px solid transparent;
+}
+
+    .product:hover {
+        border: 3px dashed #000;
+    }
+
+    .product a {
+        color: black;
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+        .product a:hover {
+            text-decoration: none;
+        }
+
+    .product:hover .text-color {
+        color: red;
+    }
+
+    .product img {
+        transition: all .5s;
+    }
+
+    .product:hover img {
+        transform: scale(0.9);
+    }
+
+.fs-18 {
+    font-size: 15px;
+}
+
+.title-product {
+    color: #3c3451;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 32px;
+    margin-bottom: 16px;
+    padding: 25px 0;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+.banner1 button, .banner2 button {
+    color: #e2ba48;
+    padding: 5px 25px;
+    outline: none;
+    background: transparent;
+    border: 2px solid #e2ba48;
+    cursor: pointer;
+    transition: all .5s;
+    font-weight: bold;
+}
+
+    .banner1 button:hover, .banner2 button:hover {
+        color: #fff;
+        background: #e2ba48;
+        border: 2px solid transparent;
+    }
+
+.title-information {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 35px;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.menuFooter li:hover {
+    color: #e2ba48;
+    cursor: pointer;
+}
+
+.more-contact p {
+    margin: 25px 0;
+}
+
+.contact p, .more-contact p {
+    color: #a4a4a4;
+    font-size: 14px;
+    margin-bottom: 0.8em;
+}
+
+.contact input {
+    border-radius: 30px;
+    padding: 15px 30px;
+    width: 75%;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+}
+
+    .contact input:focus {
+        border: none;
+        outline: none;
+    }
+
+.backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+    .backToTop img {
+        width: 45px;
+        height: 45px;
+    }
+
+.cd-top--is-visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hide-menubar {
+    position: fixed;
+    top: -400px;
+    width: 100%;
+    transition: top 0.5s;
+    background-color: black;
+    z-index: 12345;
+}
+
+header {
+    background-color: black;
+}
+
+.navbar-nav li a {
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgba(255,255,255,0.8);
+    transition: all .5s;
+}
+
+span.nameUser {
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgba(255,255,255,0.8);
+    transition: all .5s;
+}
+
+.navbar-nav li:hover a {
+    color: #e2ba48;
+}
+
+.detail-product {
+    text-shadow: 0 0 2px black;
+}
+
+#ContentPlaceHolder1_GridView1 td:hover {
+    background-color: #e2ba48;
+}
+
+    #ContentPlaceHolder1_GridView1 td:hover a {
+        color: #fff;
+        font-weight: bold;
+        border-left: 5px solid #fff;
+    }
+
+#ContentPlaceHolder1_GridView1 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 8px 35px;
+    color: #000;
+    font-weight: bold;
+    text-shadow: 0 0 1px black;
+    border-left: 5px solid transparent;
+}
+
+    #ContentPlaceHolder1_GridView1 a:hover {
+        text-decoration: none;
+    }
+
+.styleText span {
+    display: block;
+    white-space: nowrap;
+    width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+.item a {
+    color: black;
+}
+
+
+.item img {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của khung chứa */
+    height: 200px; /* Chiều cao cố định */
+    object-fit: cover; /* Cắt ảnh để giữ tỷ lệ */
+    border-radius: 5px; /* Bo góc nhẹ nhàng */
+
+    transition: transform 0.3s ease;
+}
+
+
+
+.item:hover img {
+    transform: scale(0.9);
+}
+
+.item:hover a {
+    text-decoration: none;
+    color: #e2ba48;
+}
+
+.step-by-step {
+    color: #3c3451;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    padding: 8px 0;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+}
+
+/* Chatbox container styles */
+/* Chatbox container styles */
+.chatbox-container {
+    position: fixed;
+    bottom: 20px; /* Thay vì 10px để cách từ dưới lên một chút */
+    right: 20px; /* Thay vì 10px để căn chỉnh ra phía bên phải */
+    width: 350px; /* Điều chỉnh chiều rộng của chatbox */
+    height: 450px; /* Điều chỉnh chiều cao của chatbox */
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: block;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+}
+
+.chatbox-header {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chatbox-logo img {
+    width: 35px; /* Điều chỉnh kích thước logo nhỏ gọn */
+    height: 35px;
+}
+
+.chatbox-title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.chatbox-close {
+    font-size: 22px; /* Điều chỉnh kích thước biểu tượng đóng */
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Body chat */
+.chatbox-body {
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 250px;
+    font-size: 15px; /* Giảm kích thước font để dễ đọc */
+}
+
+.chatbox-footer {
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.chatbox-input {
+    width: 75%;
+    padding: 8px; /* Thêm padding để ô input thoải mái */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chatbox-send {
+    width: 20%;
+    padding: 8px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+    .chatbox-send:hover {
+        background-color: #45a049; /* Thêm hiệu ứng hover */
+    }
+
+/* Các kiểu chung cho tin nhắn */
+/* Các kiểu chung cho tin nhắn */
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 5px;
+    width: 100%; /* Tin nhắn chiếm toàn bộ chiều rộng của container */
+    word-wrap: break-word;
+    display: flex;
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding không làm tin nhắn vượt quá khung */
+}
+
+
+
+    /* Tin nhắn từ người dùng */
+    .message.user {
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        display: inline-block;
+        max-width: 1000%;
+        color: #000;
+        align-self: flex-end; /* Đẩy tin nhắn người dùng ra bên phải */
+    }
+
+    /* Tin nhắn từ chatbot */
+    .message.chatbot {
+        background-color: #e0f7fa;
+        border: 1px solid #00796b;
+        display: inline-block;
+        max-width: 100%;
+        color: #00796b;
+        align-self: flex-start; /* Đẩy tin nhắn chatbot ra bên trái */
+    }
+
+    /* Định dạng chữ in đậm cho người gửi */
+    .message strong {
+        font-weight: bold;
+    }
+
+/* Chatbox minimized button */
+.chatbox-minimized {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Nút chatbox ẩn */
+.chatbox-hidden {
+    transform: translateX(350px);
+}
+
+/* Hover effects */
+.chatbox-minimized:hover {
+    background-color: #005f73; /* Tối màu khi hover */
+}
+
+.chatbox-btn {
+    width: 100%;
+    padding: 12px; /* Tăng padding cho nút chatbox */
+    margin-bottom: 5px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .chatbox-btn:hover {
+        background-color: #005f73;
+    }
+
+

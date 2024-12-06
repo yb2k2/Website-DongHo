@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head  runat="server">
+
+    <title>Watch Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="CSS/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="Lightbox/lightbox.min.css" />
+    <link rel="stylesheet" href="aos-library/aos.css" />
+    <link rel="stylesheet" href="CSS/animate.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script type="text/javascript" src="JS/index.js"></script>
+    <link href="CSS/Global.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="hide-menubar" id="hide-navbar">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-dark px-0 navbar-onscroll-by-user">
+                    <a class="navbar-brand" href="#">
+                        <img src="Images/Mark_brand.png" width="150" alt="" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#hideNavbar"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="hideNavbar">
+                        <ul class="navbar-nav justify-content-center w-100">
+                            <%
+                                if (Session["User"] != null) { 
+                            %>
+                            <asp:Menu ID="Menu3" runat="server" DataSourceID="SiteMapDataSource2" Orientation="Horizontal">
+                                <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
+                            </asp:Menu>
+                            <li class="d-flex align-items-center mx-3">
+                                <asp:Label ID="Label1" runat="server" CssClass="nameUser"></asp:Label></li>
+                            <li>
+                                <asp:Button ID="Button1" runat="server" Text="Đăng xuất" CssClass="btn btn-success" OnClick="btnDangXuat_Click1" /></li>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource3" SiteMapProvider="LoginSuccess" ShowStartingNode="false" runat="server" />
+                            <%
+                                }
+                                else {
+                            %>
+                            <asp:Menu ID="Menu4" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal">
+                                <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
+                            </asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource4" SiteMapProvider="NotLoginSiteMap" ShowStartingNode="false" runat="server" />
+                            <%
+                                }
+                            %>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <header>
+            <div class="container_custom">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="trangchu.aspx">
+                        <img src="Images/Mark_brand.png" width="150" alt="" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav justify-content-center w-100">
+                            <%
+                                if (Session["User"] != null) {  
+                            %>
+                            <asp:Menu ID="Menu2" runat="server" DataSourceID="SiteMapDataSource2" Orientation="Horizontal">
+                                <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
+                            </asp:Menu>
+                            <li class="d-flex align-items-center mx-3">
+                                <asp:Label ID="txtTenKhachHang" runat="server" CssClass="nameUser"></asp:Label></li>
+                            <li>
+                                <asp:Button ID="btnDangXuat" runat="server" Text="Đăng xuất" CssClass="btn btn-success" OnClick="btnDangXuat_Click1" /></li>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource2" SiteMapProvider="LoginSuccess" ShowStartingNode="false" runat="server" />
+                            <%
+                                }
+                                else {
+                            %>
+                            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal">
+                                <StaticMenuItemStyle HorizontalPadding="15px" VerticalPadding="10px" />
+                            </asp:Menu>
+                            <asp:SiteMapDataSource ID="SiteMapDataSource1" SiteMapProvider="NotLoginSiteMap" ShowStartingNode="false" runat="server" />
+                            <%
+                                }
+                            %>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+      <footer class="py-4">
+    <div class="container_custom">
+        <div class="row py-4">
+            <!-- Điều hướng -->
+            <div class="col-3" data-aos="fade-right" data-aos-duration="500">
+                <h4 class="text-uppercase font-weight-bold">Điều hướng</h4>
+                <ul class="pl-3 menuFooter">
+                    <li>Trang chủ</li>
+                    <li>Về chúng tôi</li>
+                    <li>Sản phẩm</li>
+                    <li>Điểm tin hữu ích</li>
+                    <li>Liên hệ</li>
+                </ul>
+            </div>
+
+            <!-- Liên hệ -->
+            <div class="col-6" data-aos="fade-up" data-aos-duration="1000">
+                <div class="contact text-center">
+                    <img src="Images/Mark_brand.png" width="150" alt="Logo" />
+                    
+                    <p style="margin-top:10px;">
+Đây là trang web đồng hồ Duy Bình                    </p>
+                    <input type="text" placeholder="Nhập email của bạn..." />
+                </div>
+            </div>
+
+            <!-- Thông tin liên hệ mới -->
+            <div class="col-3 more-contact" data-aos="fade-left" data-aos-duration="1200">
+                <h4 class="text-uppercase font-weight-bold">Thông tin liên hệ</h4>
+             <!-- Trong phần footer, các icon -->
+<p><i class="fa fa-map-marker-alt" style="margin-right: 10px;"></i> NTTU . Q12 . TPHCM</p>
+<p><i class="fa fa-phone" style="margin-right: 10px;"></i>   0343 575 027</p>
+<p><i class="fa fa-envelope" style="margin-right: 10px;"></i> thanhduypham76@gmail.com</p>
+<p><i class="fab fa-facebook-f" style="margin-right: 10px;"></i> <a href="https://facebook.com/thanhduy1011" target="_blank">Thành Duy</a></p>
+
+            </div>
+
+            <!-- Bản quyền -->
+            <div class="col-12 text-center pt-4">
+                <i class="fa fa-copyright"></i> All rights reserved. Thiết kế website:
+                <img src="Images/Mark_brand.png" width="100" alt="Logo" />
+            </div>
+        </div>
+    </div>
+</footer>
+
+        <a href="#" class="cd-top text-replace js-cd-top backToTop">
+            <img src="Images/to-top.png" /></a>
+    </form>
+    <script src="JS/jquery-3.5.1.min.js"></script>
+    <script src="JS/popper.min.js"></script>
+    <script src="JS/bootstrap.min.js"></script>
+    <script src="Lightbox/lightbox.min.js"></script>
+    <script src="aos-library/aos.js"></script>
+    <script src="BackToTop/util.js"></script>
+    <script src="BackToTop/main.js"></script>
+    <script>
+        window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+                document.getElementById("hide-navbar").style.top = "0";
+            } else {
+                document.getElementById("hide-navbar").style.top = "-500px";
+            }
+        }
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
